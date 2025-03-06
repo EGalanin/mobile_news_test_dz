@@ -12,5 +12,14 @@ export default defineConfig({
       '@services': path.resolve(__dirname, './src/services'),
       '@types': path.resolve(__dirname, './src/types'),
     }
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://api.nytimes.com/svc',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
   }
 })

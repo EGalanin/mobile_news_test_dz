@@ -7,6 +7,8 @@
   background: #fff;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   z-index: 100;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .navigation {
@@ -34,9 +36,37 @@
   color: #007AFF;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.4px;
+  color: #000000;
+  text-align: center;
+
+}
+
+.image {
+  width: 84px;
+  height: 25px;
+  object-fit: cover;
+}
+
 .copyright {
   text-align: center;
   color: #999;
-  font-size: 12px;
   margin: 0;
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+
 }
