@@ -1,6 +1,6 @@
 import { lazy } from 'react';
-import { Provider } from 'react-redux'
-import { store } from './store/store'
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 import { LazyComponent } from './components/LazyComponent/LazyComponent';
 
 const NewsList = lazy(() => import('./components/NewsList/NewsList'));
@@ -12,7 +12,7 @@ function App() {
     <Provider store={store}>
       <AppContent />
     </Provider>
-  )
+  );
 }
 
 function AppContent() {
@@ -21,18 +21,18 @@ function AppContent() {
       <LazyComponent fallback="Loading header...">
         <Header />
       </LazyComponent>
-      
+
       <div style={{ flex: 1, padding: '20px' }}>
         <LazyComponent fallback="Loading news...">
           <NewsList />
         </LazyComponent>
       </div>
-      
+
       <LazyComponent fallback="Loading footer...">
         <Footer />
       </LazyComponent>
     </div>
-  )
+  );
 }
 
-export default App                  
+export default App;

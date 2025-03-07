@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styles from './Footer.module.css';
-import newsApi from "../../assets/newsApi.png";
+import newsApi from '../../assets/newsApi.png';
 
 type FooterLink = {
   title: string;
@@ -18,8 +18,8 @@ const footerGroups: FooterGroup[] = [
       { title: 'About Us', url: '/about' },
       { title: 'Publishers', url: '/publishers' },
       { title: 'Sitemap', url: '/sitemap' },
-    ]
-  }
+    ],
+  },
 ];
 
 const Footer: FC = () => {
@@ -28,14 +28,10 @@ const Footer: FC = () => {
       <nav className={styles.navigation}>
         {footerGroups.map((group, groupIndex) => (
           <div key={groupIndex} className={styles.group}>
-            {group.links.map((link, ) => (
-                <a 
-                  key={link.url} 
-                  href={link.url} 
-                  className={styles.link}
-                >
-                  {link.title}
-                </a>
+            {group.links.map(link => (
+              <a key={link.url} href={link.url} className={styles.link}>
+                {link.title}
+              </a>
             ))}
           </div>
         ))}

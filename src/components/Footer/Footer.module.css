@@ -33,7 +33,7 @@
 }
 
 .link:hover {
-  color: #007AFF;
+  color: #007aff;
 }
 
 .wrapper {
@@ -51,7 +51,6 @@
   line-height: 14.4px;
   color: #000000;
   text-align: center;
-
 }
 
 .image {
@@ -68,5 +67,4 @@
   font-weight: 400;
   font-size: 12px;
   text-align: center;
-
 }
