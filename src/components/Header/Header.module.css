@@ -1,0 +1,132 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  padding: 0 16px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.menuButton {
+  position: absolute;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menuIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 2px;
+  background: #333;
+}
+
+.menuIcon::before,
+.menuIcon::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #333;
+  transition: transform 0.3s ease;
+}
+
+.menuIcon::before {
+  top: -8px;
+}
+
+.menuIcon::after {
+  top: 8px;
+}
+
+.menuContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #333;
+}
+
+.navigation {
+  margin-top: 60px;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navigation li {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.navigation a {
+  color: #333;
+  text-decoration: none;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600;
+  display: block;
+  padding: 12px 0;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #007aff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
